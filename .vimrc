@@ -114,7 +114,8 @@ imap <leader>w <Esc>:w!<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-map <Leader> <Plug>(easymotion-prefix)
+" map <Leader>f <Plug>(easymotion-prefix)
+map <leader>/ <Plug>(easymotion-sn)
 
 let g:indentLine_enabled    = 1
 let g:indentLine_char       = '¦'
@@ -178,6 +179,7 @@ set completeopt=menu,menuone    "让Vim的补全菜单行为与一般IDE一致(�
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 nmap <C-t> :TagbarToggle<CR>
 let g:vista_icon_indent = ['╰─▸ ', '├─▸ ']
@@ -187,7 +189,6 @@ let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
-let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
